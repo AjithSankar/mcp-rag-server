@@ -1,4 +1,4 @@
-package dev.ak.mcp_server;
+package dev.ak.mcp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

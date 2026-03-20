@@ -1,4 +1,4 @@
-package dev.ak.mcp_server.service;
+package dev.ak.mcp.service;
 
 import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.VectorStore;

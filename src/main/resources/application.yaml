@@ -1,3 +1,29 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: mcp-rag-server
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ragdb
+    username: raguser
+    password: ragpass
+
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      embedding:
+        model: nomic-embed-text
+
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+
+    mcp:
+      server:
+        enabled: true
+        name: rag-server
+        protocol: STREAMABLE
+        type: SYNC  # or ASYNC
+        annotation-scanner:
+          enabled: true
