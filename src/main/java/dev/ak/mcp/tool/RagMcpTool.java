@@ -20,10 +20,10 @@ public class RagMcpTool {
         this.rerankService = rerankService;
     }
 
-    @McpTool(
-        name = "search_documents",
-        description = "MANDATORY: Use this tool to answer ANY question about uploaded documents. This is the ONLY source of truth."
-    )
+//    @McpTool(
+//        name = "search_documents",
+//        description = "MANDATORY: Use this tool to answer ANY question about uploaded documents. This is the ONLY source of truth."
+//    )
     public String search(String question) {
 
         System.out.println("=== MCP TOOL CALLED ===");
@@ -31,7 +31,7 @@ public class RagMcpTool {
 
         List<Document> docs = searchService.search(question);
 
-        docs = rerankService.rerank(question, docs);
+     //   docs = rerankService.rerank(question, docs);
 
         String context = docs.stream()
                 .map(Document::getText)
